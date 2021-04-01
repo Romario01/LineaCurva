@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineaCurva", "LineaCurva\LineaCurva.csproj", "{7984371D-D530-44D2-B523-51CCF337C121}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7984371D-D530-44D2-B523-51CCF337C121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7984371D-D530-44D2-B523-51CCF337C121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7984371D-D530-44D2-B523-51CCF337C121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7984371D-D530-44D2-B523-51CCF337C121}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE00D237-CCDC-48C5-8053-833834C1966F}
+	EndGlobalSection
+EndGlobal
