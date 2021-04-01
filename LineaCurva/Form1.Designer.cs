@@ -42,6 +42,7 @@ namespace LineaCurva
             // 
             // picDibujo
             // 
+            this.picDibujo.BackColor = System.Drawing.SystemColors.Window;
             this.picDibujo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picDibujo.Location = new System.Drawing.Point(8, 9);
             this.picDibujo.Name = "picDibujo";
@@ -132,6 +133,7 @@ namespace LineaCurva
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // Form1
             // 

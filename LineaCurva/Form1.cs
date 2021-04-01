@@ -26,6 +26,7 @@ namespace LineaCurva
         {
             btnDibujar.Enabled = false;
             listTamanio.SelectedIndex = 0;
+           
 
         }
 
@@ -108,5 +109,14 @@ namespace LineaCurva
             btnDibujar.Enabled = false;
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
+
+            sfd.ShowDialog();
+            string filename = sfd.FileName;
+            areaDibujo.Save(filename);
+        }
     }
 }
