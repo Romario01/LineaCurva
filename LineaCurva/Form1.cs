@@ -32,15 +32,19 @@ namespace LineaCurva
 
         private void picDibujo_MouseClick(object sender, MouseEventArgs e)
         {
+            //Se instancia los objetos a usar
             g = Graphics.FromImage(areaDibujo);
             if (e.Button == MouseButtons.Left)
             {
 
                 if (c < 4)
                 {
+                    //Se agregan los puntos dentro de la lista
                     puntos.Add(e.Location);
+                    //se dibuja el punto en el pictureBox
                     g.DrawEllipse(pt, e.X, e.Y, 1, 1);
                     picDibujo.Image = areaDibujo;
+                    //aumentamos el click
                     c++;
                 }
                 else
@@ -88,12 +92,19 @@ namespace LineaCurva
             color = cmbColor.Text.ToString();
             tamaño = float.Parse(listTamanio.Text.ToString());
 
+            //hacemos que las imagenes se vean curveadas y sin bordes cuadrados
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            //creamos el lapiz, recibe el color y tamaño seleccionado
             Pen lapiz = new Pen(seleccionDeColor(color),tamaño);
+            //creamos un arreglo de tipo Punto
             misPuntos = new Point[puntos.Count];
+            //copiamos los puntos guardados en la lista al arreglo
             puntos.CopyTo(misPuntos);
+            //creamos la curva de bezier con las propiedades del lapiz y los puntos del arreglo
             g.DrawBeziers(lapiz, misPuntos);
+            //dibujamos la curva
             picDibujo.Image = areaDibujo;
+            //vaciamos las varibles que usamos
             c = 0;
             puntos.Clear();
             btnDibujar.Enabled = false;
@@ -101,6 +112,7 @@ namespace LineaCurva
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            //
             picDibujo.Image = null;
             areaDibujo.Dispose();
             areaDibujo = new Bitmap(636, 429);
